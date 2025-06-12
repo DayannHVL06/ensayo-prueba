@@ -52,27 +52,25 @@ img {
   justify-content: space-between; /*tener espacio entre los items*/
   padding: 0 15.625rem;
   height: 8rem;
-
-  /*background-attachment: fixed;
-  z-index: 1;
-  position:relative;*/
+  z-index: 2;
 }
 
 .fondo {
-  background-image: url(/img/site-header-background.jpeg);/*llamo a la imagen*/
-  height: 35rem;/*agrandar la imagen en la pagina*/
-  background-size: cover;/*la imagen ocupa menos espacio*/
-  background-position: center;/*para que este centrado*/
-  background-repeat: no-repeat;/*imagen completa en una sola posicion . pequeño cuadro*/
-  z-index: 1;/**/
-  padding-left: 16rem;/**/
-  background-attachment: fixed;/**/
-  display:flex ;
+  background-image: url(/img/site-header-background.jpeg); /*llamo a la imagen*/
+  height: 35rem; /*agrandar la imagen en la pagina*/
+  background-size: cover; /*la imagen ocupa menos espacio*/
+  background-position: center; /*para que este centrado*/
+  background-repeat: no-repeat; /*imagen completa en una sola posicion . pequeño cuadro*/
+  z-index: 1; /**/
+  padding-left: 16rem; /**/
+  background-attachment: fixed; /**/
+  display: flex;
   align-items: center;
   justify-content: flex-start;
-
+  position: relative;
 }
-.fondo::before{
+
+.fondo::before {
   content: "";
   position: absolute;
   top: 0;
@@ -80,11 +78,8 @@ img {
   width: 50%;
   height: 100%;
   z-index: 1;
-  background-color: #2b2a2a25;
+  background-color: #1616164f;
 }
-
-
-
 
 .title {
   color: #053477; /*cambiar el color de las letras*/
@@ -92,4 +87,311 @@ img {
   position: relative;
   z-index: 2;
   padding-left: 3rem;
-  }
+}
+
+
+/* seccion nuestro trabajo */
+.trabajo-container {
+padding: 4rem 10rem;
+
+
+
+}
+
+.contenedor-trabajo{
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: nowrap; /*obliga  o fuerza a que esten en una sola fila*/
+
+
+}
+
+
+.nuestro-trabajo h2 {
+  font-size: 4rem;
+  color: #2a4b7a;
+  margin: 0;
+  line-height: 1.2;
+
+}
+
+.nuestro-trabajo{
+  min-width: 20rem;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+/* como se muestran las columnas - lista */
+.lista-trabajo {
+display: flex;
+flex-direction: column;
+gap: 2.5rem;
+margin-top: 4rem;
+  
+
+}
+
+.item-trabajo{
+display: flex;
+align-items: flex-start;
+gap: 2rem;
+}
+
+/* como se van a ver las imagenes */
+.item-trabajo img {
+width: 6rem;
+margin-bottom: 0.5rem;
+
+}
+
+/* como se veran los titulos de h3 */
+.item-trabajo h3 {
+font-size: 2rem;
+color: #ff9c2b;
+margin: 0.5rem 0 0.25rem;
+}
+
+.item-trabajo P {
+font-size: 1.5rem;
+color: #053477;
+margin:  0;
+}
+
+.texto-item {
+display: flex;
+flex-direction: column;
+}
+
+/* NUESTRO EQUIPO */
+.nuestro-equipo-container {
+padding: 4rem 10rem;
+text-align: center;
+
+}
+
+.nuestro-equipo h2 {
+font-size: 3.5rem;
+color: #053477;
+margin-bottom: 3rem; /*separacion de imagenes y texto osea : espacio*/
+}
+
+.lista-equipo{
+  display: flex;
+  gap: 3rem;/*para que tengan su espacio*/
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.texto-equipo h3 {
+color: #ff9c2b;
+font-size: 2rem;
+min-height: 3rem;
+}
+
+.texto-equipo p {
+color: #053477;
+font-size: 1.5rem;
+}
+
+.item-equipo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  min-height: 300px;
+  text-align: center;
+
+}
+
+/* seccion contacto */
+/* ===== CONTACTO ===== */
+.contacto-container {
+    background-color: #2A4B7A;
+    padding: 5rem 3rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contacto-container h2 {
+    color: #F75F1C;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.contacto-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+legend {
+    font-size: 2.2rem;
+    color: #F75F1C;
+    margin-bottom: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo label {
+    display: block;
+    font-size: 1.8rem;
+    color: #ffffff;
+    width: 8rem;
+}
+
+.campo input[type="text"],
+.campo select,
+.campo textarea {
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.campo textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.campo input[type="submit"] {
+    color: #ffffff;
+    background-color: #E35619;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.contacto-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.datos-contacto {
+    flex: 1;
+
+}
+
+.contacto-container form {
+    flex: 1;
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer-container {
+    background-color: #ffffff;
+    color: rgb(247, 247, 247);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #b34516;
+    width: 100vw;
+    padding: 0.70rem 0;
+
+
+}
+
+.footer-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2);
+}
+
+.footer-text {
+    font-size: 1.6rem;
+    color: #053477;
+    text-align: center;
+
+}
+
+/* === SECCIÓN DE INFORMACIÓN (3 columnas) === */
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 3rem 2rem 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+    color: #053477;
+}
+
+/* === COLUMNA INDIVIDUAL === */
+.footer-col {
+    flex: 1 1 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+/* === TÍTULOS DE CADA COLUMNA === */
+.footer-col h4 {
+    font-size: 1.6rem;
+    color: #000000;
+    border-bottom: 2px solid #E35619; /* Línea naranja debajo */
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+/* === PÁRRAFOS DE TEXTO === */
+.footer-col p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* === ENLACES ESTILO AZUL CLÁSICO === */
+.footer-col a {
+    color: #226cf7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
