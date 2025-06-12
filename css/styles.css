@@ -1,12 +1,95 @@
 @font-face {
-    font-family: segoi-ui;
-    src: url('../segoe-ui-4-cufonfonts/Segoe\ UI.ttf');
+  font-family: segoi-ui;
+  src: url("../segoe-ui-4-cufonfonts/Segoe\ UI.ttf");
 }
 
 body {
-    font-family: segoi-ui;
+  font-family: segoi-ui;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
+
+/*logo menu*/
+.camion-logo {
+  width: 12.5rem; /*tamaño del logo*/
+}
+
+/*menu de navegacion*/
+.menu-navegacion {
+  /*afecta a solo la clase menu-navegacion*/
+  list-style: none; /*para listar y quitar puntos*/
+  display: flex; /* ordenarlos de forma horizontal*/
+  gap: 0.625rem; /* para separarlos*/
+  margin: 0; /**/
+  padding: 0; /*ordena el menu*/
+}
+.menu-navegacion a {
+  /*afecta a todas las a de navegacion*/
+  padding: 0.625rem 0.75rem; /*alto y ancho, y separacion*/
+  background: #ffffff; /* cambia el color de los cuadros de navegacion*/
+  color: black; /*le cambia el color a las letras*/
+  text-decoration: none; /*se va la linea fea de las letras*/
+  border-radius: 0.25rem; /*cambia el borde del navegador*/
+  font-weight: bold; /*letra guatona*/
+  transition: background 0.3s; /*animacion de cursor*/
+}
+
+.menu-navegacion a:hover {
+  background: #60b9e2; /*color de animacion de cursor*/
+}
+.menu-navegacion a[aria-current="page"] {
+  /*con esto llamo solamente a esta clase para afectar solo este boton*/
+  background: #3c59fc; /*mantener el color solo de este boton*/
+  color: #e0e0e0; /*tener su letra blanca para hacer contraste y resaltar ante el color puesto anteriormente*/
+}
+
+.header {
+  /*contenedor de menu y logo*/
+  display: flex; /*para que esten uno al lado del otro*/
+  align-items: center; /*para que el menu este al medio  centrado*/
+  justify-content: space-between; /*tener espacio entre los items*/
+  padding: 0 15.625rem;
+  height: 8rem;
+
+  /*background-attachment: fixed;
+  z-index: 1;
+  position:relative;*/
+}
+
+.fondo {
+  background-image: url(/img/site-header-background.jpeg);/*llamo a la imagen*/
+  height: 35rem;/*agrandar la imagen en la pagina*/
+  background-size: cover;/*la imagen ocupa menos espacio*/
+  background-position: center;/*para que este centrado*/
+  background-repeat: no-repeat;/*imagen completa en una sola posicion . pequeño cuadro*/
+  z-index: 1;/**/
+  padding-left: 16rem;/**/
+  background-attachment: fixed;/**/
+  display:flex ;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+.fondo::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  background-color: #2b2a2a25;
+}
+
+
+
+
+.title {
+  color: #053477; /*cambiar el color de las letras*/
+  font-size: 1.9rem; /*cambiar el tamaño del texto*/
+  position: relative;
+  z-index: 2;
+  padding-left: 3rem;
+  }
